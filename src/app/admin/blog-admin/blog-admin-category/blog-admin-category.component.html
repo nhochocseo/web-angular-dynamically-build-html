@@ -1,0 +1,31 @@
+<mat-tab-group>
+    <mat-tab label="Thêm danh mục" [formGroup]="DanhMuc" (ngSubmit)="onSubmit()">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <app-input formControlName="Ten" (keyup)="OnChange()" placeholder="Tiêu đề"></app-input>
+                            </div>
+                            <div class="col-md-5">
+                                <app-input formControlName="Url" placeholder="Đường dẫn" readonly="true"></app-input>
+                            </div>
+                            <div class="col-md-6">
+                                <app-input formControlName="IdDanhMucCha" placeholder="Danh mục cha" valueName="Ten" valueType="Id" type="selecttow" [data]="{ options: listCategorySelect }"></app-input>
+                            </div>
+                        </div>
+                        <div class="center pd-15">
+                            <button mat-raised-button color="primary" (click)="onSubmit()">Lưu</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="tree-root-list">
+                            <app-menu-category (data)="ViewData($event)" *ngFor="let item of listCategory"
+                                           [current]="item">
+                            </app-menu-category>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </mat-tab>
+</mat-tab-group>

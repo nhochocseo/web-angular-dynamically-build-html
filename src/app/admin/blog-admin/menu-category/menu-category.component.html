@@ -1,0 +1,8 @@
+<li class="node-item">
+<a (click)="ViewData(current)">{{current.Ten}}</a>
+<ul class="child-list" *ngIf="hasChildElements()">
+      <app-menu-category *ngFor="let child of current.ListChild"
+                     [current]="child">
+      </app-menu-category>
+  </ul>
+</li>

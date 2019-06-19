@@ -1,0 +1,5 @@
+<ul class="main-menu menu-left">
+    <li *ngFor="let menu of listSidebarMenu" (click)="OpenPage(menu.url)" [ngClass]="isBankgroundActive == menu.url ? 'active' : ''">
+        <a>{{menu.name}}</a>
+    </li>
+</ul>

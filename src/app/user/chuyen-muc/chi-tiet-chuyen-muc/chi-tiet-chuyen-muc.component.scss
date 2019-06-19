@@ -1,0 +1,21 @@
+.tieude {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    margin-bottom: 10px;
+}
+
+.content-post {
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, .26);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}

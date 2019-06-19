@@ -1,0 +1,23 @@
+.navbar-dark {
+    .navbar-nav {
+        .nav-link {
+            color: hsl(0, 2%, 7%);
+        }
+    }    
+}
+.collapsible-body.active {
+    display: block;
+    transition: all 1s; 
+}
+.list-unstyled {
+    li.active {
+        background-color: rgba(29,65,82,.8);
+    }
+}
+.side-nav .logo-wrapper, .side-nav .logo-wrapper a {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    line-height: 80px;
+}

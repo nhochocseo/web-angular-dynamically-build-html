@@ -1,0 +1,53 @@
+.post-item {
+    padding-right: 5px;
+    padding-left: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.card-body {
+    .card-text {
+        // white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #293134 !important;
+    }
+    a:hover {
+        color: blueviolet!important;
+    }
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.mat-tab-body {
+    margin: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-form {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+.active {
+    color: #1071d2!important;
+}
+.mat-optgroup-label {
+    display: none!important;
+}

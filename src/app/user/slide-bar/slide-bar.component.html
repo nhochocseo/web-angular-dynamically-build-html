@@ -1,0 +1,5 @@
+<ul class="main-menu menu-left active" #ul>
+    <li *ngFor="let menu of listSidebarMenu" (click)="OpenPage(menu.url)" [style.background]="router.url.search(menu.url) > -1 ? activeLink : ''">
+        <a><strong><mat-icon>code</mat-icon></strong> {{menu.name}}</a>
+    </li>
+</ul>

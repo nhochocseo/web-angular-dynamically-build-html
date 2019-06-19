@@ -1,0 +1,60 @@
+<div class="row no-mr">
+    <div class="col-md-4 col-lg-3 post-item" *ngFor="let post of listPost">
+        <div class="card mr-b-5 box-shadow">
+            <img class="card-img-top" alt="{{post.name}}" style="height: 225px; width: 100%; display: block;" src="{{post.image | defaultThumbnail}}" data-holder-rendered="true">
+            <div class="card-body">
+                <p class="card-text">
+                    <a class="blue" (click)="ChiTiet(post)">{{post.name}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<h1>
+    Here is what you need to know
+    <br> about dynamic components in Angular asdasdvasda dhasgdgasdgjagsd ádagsdgajhsgd
+</h1>
+<button mat-raised-button (click)="openDialog()">Open dialog</button>
+<mat-tab-group>
+    <mat-tab label="Basic Factory Resolver">
+        <h3>Factory Resolver</h3>
+        <app-a-factory></app-a-factory>
+
+        <!-- <h3>NgModuleLoader</h3>
+        <app-a-ng></app-a-ng>
+  
+        <h3>On the fly</h3>
+        <app-otf></app-otf> -->
+
+    </mat-tab>
+    <mat-tab label="Use input without dynamic component" [formGroup]="normalForm">
+        <mat-form-field>
+            <input matInput placeholder="Input Text" formControlName="input">
+            <mat-error *ngIf="normalForm.get('input').hasError('required') && (normalForm.get('input').dirty || normalForm.get('input').touched)">
+                This field is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+    </mat-tab>
+    <mat-tab label="Use input with dynamic component" [formGroup]="exampleDynamicForm">
+        <mat-form-field>
+            <input matInput placeholder="Input Text" formControlName="input">
+            <mat-error *ngIf="normalForm.get('input').hasError('required') && (normalForm.get('input').dirty || normalForm.get('input').touched)">
+                This field is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Input Text" formControlName="input">
+            <mat-error *ngIf="normalForm.get('input').hasError('required') && (normalForm.get('input').dirty || normalForm.get('input').touched)">
+                This field is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <app-input formControlName="input" placeholder="type text" label="Input Text"></app-input>
+        <app-input formControlName="input" placeholder="type text" label="Input Text"></app-input>
+        <p>{{ exampleDynamicForm.get('input').value }}</p>
+        <app-input formControlName="select" placeholder="type select" label="Input Select" type="select" [data]="{ options: options }"></app-input>
+        <p>{{ exampleDynamicForm.get('select').value }}</p>
+        <app-input formControlName="date" placeholder="type text" label="Input Date" type="date"></app-input>
+        <p>{{ exampleDynamicForm.get('date').value | date: 'dd/MM/yyyy' }}</p>
+    </mat-tab>
+</mat-tab-group>

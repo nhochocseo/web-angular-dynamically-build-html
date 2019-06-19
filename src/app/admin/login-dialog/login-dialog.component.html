@@ -1,0 +1,13 @@
+<form class="login-form" [formGroup]="LoginForm" (ngSubmit)="OnSubmit()">
+  <div class="row">    
+    <h3 mat-dialog-title>Đăng Nhập</h3>
+  </div>
+  <mat-dialog-content>
+        <app-input formControlName="user" placeholder="Tên đăng nhập"></app-input> 
+        <app-input formControlName="password" type="password" placeholder="Mật khẩu"></app-input>
+  </mat-dialog-content>
+  <mat-dialog-actions class="row">
+    <button mat-button type="submit" class="btn-login">Đăng nhập</button>
+    <button mat-button (click)="DangKy()" class="btn-dangky">Đăng Ký</button>
+  </mat-dialog-actions>
+</form>

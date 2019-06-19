@@ -1,0 +1,33 @@
+<div class="body-admin">
+    <div class="header row">
+        <h3 class="header-left">
+            <div class="icon-logo">
+                <mat-icon (click)="ShowSidebar()">menu</mat-icon>
+            </div>
+            <div class="text-logo">CDCMS</div>
+        </h3>
+        <div class="header-right">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tên tài khoản
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-full">
+        <div class="siderbar" [ngClass]="{'show': isShow}">
+            <app-siderbar></app-siderbar>
+        </div>
+        <div class="main-content" [ngClass]="{'show': isShow}">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class="footer">
+        Copyright © 2018 Cao Dũng. All Rights Reversed
+    </div>
+</div>

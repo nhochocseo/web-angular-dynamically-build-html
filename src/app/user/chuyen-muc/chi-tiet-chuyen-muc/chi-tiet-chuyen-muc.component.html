@@ -1,0 +1,21 @@
+<div class="tieude">
+    <a (click)="ViewChuyenMuc()">Chuyên mục</a> / <a (click)="ViewCategory(category?.url)">{{category?.name}}</a> / {{chiTietChuyenMuc?.name}}
+</div>
+<div class="content-post">
+    {{chiTietChuyenMuc?.content}}
+</div>
+<div class="tieude">
+    Bài viết liên quan
+</div>
+<div class="row no-mr">
+    <div class="col-md-4 col-lg-3 post-item" *ngFor="let post of baiVienLienQuan">
+        <div class="card mr-b-5 box-shadow">
+            <img class="card-img-top" alt="{{post.name}}" style="height: 225px; width: 100%; display: block;" src="{{post.image | defaultThumbnail}}" data-holder-rendered="true">
+            <div class="card-body">
+                <p class="card-text">
+                    <a class="blue" (click)="ChiTiet(post)">{{post.name}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<mat-form-field class="input-select-towdrop">
+  <mat-select [placeholder]="placeholder" [formControl]="formControlInput">
+    <mat-option class="original-select" [value]="0" aria-selected="true">
+        --- Chọn ---
+    </mat-option>
+    <mat-optgroup *ngFor="let option of options" [label]="option[valueName]">
+        <mat-option class="original-select" [value]="option[valueType]" >
+            {{option[valueName]}}
+        </mat-option>
+      <mat-option *ngFor="let optionchild of option.ListChild" [value]="optionchild[valueType]" >
+        {{optionchild[valueName]}}
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>

@@ -1,0 +1,8 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" *ngFor="let menu of listMenu"><a (click)="OpenPage(menu.url)" [ngClass]="isUrlClass == menu.url ? 'active' : ''">{{menu.name}}</a></li>
+    </ol>
+</nav>
+<div class="main-blog">
+    <router-outlet></router-outlet>
+</div>

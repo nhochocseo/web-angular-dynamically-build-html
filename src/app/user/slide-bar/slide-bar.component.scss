@@ -1,0 +1,28 @@
+ul.main-menu {
+    margin: 0px;
+    padding: 0px;
+    li {
+        padding: 5px 0px 5px 15px;
+        transition: 0.6s all;
+        list-style: none;
+        white-space: nowrap;
+        overflow: hidden;
+        a {
+            color: #FFF;
+            strong {
+                margin: 0px 11px 0px 0px;
+                line-height: 24px;
+                height: 24px;
+                float: left;
+            }
+        }
+        a:hover {
+            text-decoration:none;
+        }
+    }
+    li:hover {
+        cursor: pointer;
+        background: #fafafa36;
+        transition: 0.6s all;
+    }
+}

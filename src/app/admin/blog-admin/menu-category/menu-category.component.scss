@@ -1,0 +1,13 @@
+li.node-item {
+    a {
+        color: blue;
+    }
+    ul.child-list {
+        li.node-item {
+            padding-left: 15px;
+            a {
+                color: black;
+            }
+        }
+    }
+}
