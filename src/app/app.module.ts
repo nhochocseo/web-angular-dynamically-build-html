@@ -13,6 +13,8 @@ import { HomeAppModule } from './home/home.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ServerInterceptorService } from './services/server-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
+import { ServerModule } from '@angular/platform-server';
+import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 export const httpInterceptorProviders = [
   { provide: HTTP_INTERCEPTORS, useClass: ServerInterceptorService, multi: true },
 ];
@@ -48,6 +50,9 @@ export const httpInterceptorProviders = [
       preventDuplicates: true,
       maxOpened: 1
     }),
+    BrowserModule.withServerTransition({ appId: 'web-angular' }),
+    ServerModule,
+    ModuleMapLoaderModule
   ],
   exports: [
     // PipeModule

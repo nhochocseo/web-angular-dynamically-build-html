@@ -15,9 +15,9 @@
           "options": {
             "outputPath": "dist/web-angular",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/main.server.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "src/tsconfig.server.json",
             "assets": [
               "src/favicon.ico",
               "src/assets"
